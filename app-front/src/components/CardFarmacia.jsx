@@ -4,15 +4,13 @@ import '../styles/components/cardFarmacia.css'
 
 export default function CardFarmacia(props) {
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+        <Card style={{ width: '18rem', background: '#F3F2F2', borderRadius: '30px', padding: '1rem', display: 'flex', alignItems: 'center'}} className="cardFarmacia">
+            <Card.Img variant="top" src={props.imagem} style={{width: '94px', height: '64'}} />
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title>{props.nome}</Card.Title>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    {props.endereco}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
     )

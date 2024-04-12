@@ -3,24 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import PaginaInicial from "./routes/PaginaInicial";
-import Servico from "./routes/Servico";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Contato from "./routes/Contato";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <PaginaInicial />,
-  },
-  {
-    path: "/servico",
-    element: <Servico />,
-  },
-  {
-    path: "/contato",
-    element: <Contato />,
-  },
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

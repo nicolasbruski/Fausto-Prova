@@ -21,3 +21,9 @@
     padding: 1rem 3rem;
     border-top: 2px solid #afafaf;
 }
+
+.farmacias {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}

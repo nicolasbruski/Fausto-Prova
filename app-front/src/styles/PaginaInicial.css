@@ -3,27 +3,33 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 5rem;
 }
 
-.farmacia h1{
-    font-size: 20px;
-    color: #6d6d6d;
-    font: bold;
+.conteudo h1{
+    font-size: 23px;
+    color: #858585;
+    font: 700 1.5rem 'Roboto', sans-serif;
 }
 
 .farmacia{
+    padding: 1rem 3rem;
+    border-top: 2px solid #afafaf;
+}
+
+.conteudo{
     display: flex;
     text-align: right;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
     padding: 1rem 3rem;
-    border-top: 2px solid #afafaf;
+    width: 100%;
 }
 
 .farmacias {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
 }

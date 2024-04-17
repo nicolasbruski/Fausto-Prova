@@ -6,6 +6,7 @@ import PaginaInicial from "./routes/PaginaInicial";
 import Servico from "./routes/Servico";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Contato from "./routes/Contato";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {

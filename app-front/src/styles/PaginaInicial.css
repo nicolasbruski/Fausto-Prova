@@ -41,20 +41,24 @@
   flex-direction: row;
 }
 .button-nav {
-  display: flex;
-  flex-direction: row !important;
-  justify-content: space-between !important;
-  word-spacing: 0.5rem;
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
   word-wrap: break-word;
   margin-top: 1rem;
-  width: 19rem;
-  height: 6rem;
+  width: 14rem !important;
+  height: 5rem;
   border-radius: 30px !important;
   padding: 1rem 2rem !important;
-  background-color: var(--second-color) !important;
+  background-color: var(--secundary-color) !important;
   color: var(--primary-color) !important;
 }
 .button-nav:hover {
   background-color: var(--hover-color) !important;
   color: var(--primary-color) !important;
+}
+
+span {
+  width: 100%;
+  font-size: 0.8rem;
 }

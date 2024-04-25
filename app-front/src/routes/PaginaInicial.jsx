@@ -9,7 +9,9 @@ import pagueMenos from "../assets/pagueMenos.png";
 import { Button } from "react-bootstrap";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import GridOnIcon from "@mui/icons-material/GridOn";
+import GridViewIcon from "@mui/icons-material/GridView";
+import AddIcon from "@mui/icons-material/Add";
+import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 import paracetamol from "../assets/paracetamol.png";
 import CardMedicamento from "../components/CardMedicamento";
 
@@ -76,18 +78,50 @@ export default function PaginaInicial() {
     <div className="paginaInicial">
       <div className="buttons conteudo">
         <Button variant="light" className="button-nav">
-          <GridOnIcon />
+          <div className="icon">
+            <GridViewIcon
+              style={{
+                color: "var(--hover-color)",
+                fontSize: "6rem",
+                width: "2.5rem",
+              }}
+            />
+          </div>
           <span>TODOS OS DEPARTAMENTOS</span>
         </Button>
         <Button variant="light" className="button-nav">
-          <GridOnIcon />
-          MAIS BUSCADOS
+          <div className="icon">
+            <AddIcon
+              style={{
+                color: "var(--hover-color)",
+                fontSize: "6rem",
+                width: "3rem",
+              }}
+            />
+          </div>
+          <span>MAIS BUSCADO</span>
         </Button>
         <Button variant="light" className="button-nav">
-          MARCAS SELECIONADAS
+          <div className="icon">
+            <AutoAwesomeMotionIcon
+              style={{
+                color: "var(--hover-color)",
+                fontSize: "2.5rem",
+                width: "3rem",
+              }}
+            />
+          </div>
+          <span>MARCAS SELECIONADAS</span>
         </Button>
         <Button variant="light" className="button-nav">
-          FARMACIAS PRÓXIMAS
+          <AddIcon
+            style={{
+              color: "var(--primary-color)",
+              fontSize: "6rem",
+              width: "3rem",
+            }}
+          />
+          <span>FARMACIAS PRÓXIMAS</span>
         </Button>
       </div>
       <div className="farmacia conteudo">
@@ -102,13 +136,16 @@ export default function PaginaInicial() {
       </div>
       <div className="medicamentos conteudo">
         <h1>Os Mais Buscados</h1>
-        <div className="medicamentos">
+        <div className="carrousel">
           <div className="button-right">
-            <Button variant="light">
-              <ChevronLeftIcon />
+            <Button
+              variant="light"
+              style={{ background: "var(--secundary-color)" }}
+            >
+              <ChevronLeftIcon style={{ color: "var(--primary-color)" }} />
             </Button>
           </div>
-          <div className="medicamento">
+          <div className="medicamentos">
             {medicamentos.map((medicamento) => (
               <CardMedicamento
                 imagem={medicamento.imagem}
@@ -118,8 +155,11 @@ export default function PaginaInicial() {
             ))}
           </div>
           <div className="button-left">
-            <Button variant="light">
-              <ChevronRightIcon />
+            <Button
+              variant="light"
+              style={{ background: "var(--secundary-color)" }}
+            >
+              <ChevronRightIcon style={{ color: "var(--primary-color)" }} />
             </Button>
           </div>
         </div>

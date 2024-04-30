@@ -12,6 +12,66 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import GridViewIcon from "@mui/icons-material/GridView";
 import AddIcon from "@mui/icons-material/Add";
 import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
+import paracetamol from "../assets/paracetamol.png";
+import CardMedicamento from "../components/CardMedicamento";
+
+const medicamentos = [
+  {
+    nome: "Paracetamol",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Dipirona",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Ibuprofeno",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Dorflex",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Doril",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Novalgina",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Buscopan",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Omeprazol",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Ranitidina",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Dorflex",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  },
+  {
+    nome: "Doril",
+    imagem: paracetamol,
+    dosagem: "500mg",
+  }
+];
 
 export default function PaginaInicial() {
   return (
@@ -85,7 +145,15 @@ export default function PaginaInicial() {
               <ChevronLeftIcon style={{ color: "var(--primary-color)" }} />
             </Button>
           </div>
-          <div className="medicamentos"></div>
+          <div className="medicamentos">
+            {medicamentos.map((medicamento) => (
+              <CardMedicamento
+                imagem={medicamento.imagem}
+                nome={medicamento.nome}
+                dosagem={medicamento.dosagem}
+              />
+            ))}
+          </div>
           <div className="button-left">
             <Button
               variant="light"
